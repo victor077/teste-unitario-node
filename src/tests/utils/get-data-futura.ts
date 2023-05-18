@@ -3,5 +3,5 @@
 import { parseISO, setYear } from "date-fns";
 
 export function getDataFutura(data: string): Date {
-  return setYear(parseISO(data), new Date().getFullYear() + 1);
+  return setYear(parseISO(data), new Date(data).getFullYear() + 1);
 }
