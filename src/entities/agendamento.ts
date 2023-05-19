@@ -24,6 +24,11 @@ export class Agendamento {
     if (dataInicio >= dataFim) {
       throw new Error("Data invalida");
     }
+
+    if (dataInicio <= new Date()) {
+      throw new Error("Data não disponivel");
+    }
+
     this.props = props;
   }
 }
